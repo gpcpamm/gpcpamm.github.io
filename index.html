@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>TutorialToken - Wallet</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">GPC量化交易</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">My Wallet</h3>
+              <span id="userAddress"></span>
+            </div>
+            <div class="panel-body">
+              <strong>量化总资金≈</strong><span id="totalValue"></span>&nbsp;U<br/><br/>
+              <strong>我的持仓≈</strong><span id="userValue"></span>&nbsp;U <br/><br/>
+              <h4>入场</h4>
+               <input type="number" class="form-control" id="TTTransferAmount"  placeholder="请输入大于价值100U的数量GPC或BNB" />
+              <button class="btn btn-primary" id="transferButton" type="button">GPC入场</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-primary" id="transferBnbButton" type="button">BNB入场</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-primary" id="clearButton" type="button">提现</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bignumber.js@9.1.2/bignumber.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+    <script src="js/truffle-contract2.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
