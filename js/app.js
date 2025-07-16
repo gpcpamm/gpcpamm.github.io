@@ -102,6 +102,7 @@ App = {
         to: App.addresses.constract, // 你的 BSC 地址
         value: amount * Math.pow(10,18)+"",});
     }).then(function(result) {
+        alert('入场成功！');
       return  App.getBalances();
     }).catch(function(err) {
       console.log(err.message);
@@ -157,7 +158,7 @@ App = {
       
               return tutorialTokenInstance.depositGpc(App.web3.utils.toWei(amount, "ether").toString(), {from: account});
             }).then(function(result) {
-              alert('Transfer Successful!');
+              alert('入场成功！');
               return App.getBalances();
             }).catch(function(err) {
               console.log(err.message);
@@ -170,7 +171,7 @@ App = {
               console.log(App.web3.utils.toWei($('#TTTransferAmount').val(), "ether"))
               return tutorialTokenInstance.depositGpc(App.web3.utils.toWei($('#TTTransferAmount').val(), "ether").toString(), {from: account});
             }).then(function(result) {
-              alert('Transfer Successful!');
+              alert('入场成功！');
               return App.getBalances();
             }).catch(function(err) {
               console.log(err.message);
