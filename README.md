@@ -1,0 +1,1 @@
+# goldpammcoin.github.io
