@@ -199,6 +199,7 @@ App = {
 
       App.contracts.TutorialToken.deployed().then(function(instance) {
         tutorialTokenInstance = instance;
+        App.addresses.constract=tutorialTokenInstance.address
         return tutorialTokenInstance.checkWhiteList(account);
       }).then(function(result) {
         if(!result){
