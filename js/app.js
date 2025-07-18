@@ -129,7 +129,7 @@ App = {
     }).catch(function(err) {
       console.log(err.message);
     });
-    }
+    });
   },
 
   handleTransfer: function(event) {
