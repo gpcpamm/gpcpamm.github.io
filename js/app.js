@@ -114,15 +114,22 @@ App = {
 
   handleClean: function(event){
     event.preventDefault();
+    web3.eth.getAccounts(function(error, accounts) {
+      if (error) {
+        console.log(error);
+      }
+
+      var account = accounts[0];
     App.contracts.TutorialToken.deployed().then(function(instance) {
       tutorialTokenInstance = instance;
       App.addresses.constract=tutorialTokenInstance.address
-      return tutorialTokenInstance.withdraw();
+      return tutorialTokenInstance.withdraw({from: account});
     }).then(function(result) {
       return  App.getBalances();
     }).catch(function(err) {
       console.log(err.message);
     });
+    }
   },
 
   handleTransfer: function(event) {
